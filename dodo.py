@@ -220,6 +220,11 @@ def task_chart_repo_rates():
 
 
 notebook_tasks = {
+    "test.ipynb": {
+    "file_dep": [],
+    "targets": [],
+    },
+    
     "index.ipynb": {
         "file_dep": [],
         "targets": [],
@@ -228,10 +233,10 @@ notebook_tasks = {
         "file_dep": [],
         "targets": [],
     },
-    "02_example_with_dependencies.ipynb": {
-        "file_dep": ["./src/pull_fred.py"],
-        "targets": [Path(OUTPUT_DIR) / "GDP_graph.png"],
-    },
+    # "02_example_with_dependencies.ipynb": {
+    #     "file_dep": ["./src/pull_fred.py"],
+    #     "targets": [Path(OUTPUT_DIR) / "GDP_graph.png"],
+    # },
     "03_public_repo_summary_charts.ipynb": {
         "file_dep": [
             "./src/pull_fred.py",
